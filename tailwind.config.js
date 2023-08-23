@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['Lobster', 'cursive'],
+        'heading': ['Montserrat', 'sans-serif'],
         'body': ['Lato', 'sans-serif'],
       },
     },
