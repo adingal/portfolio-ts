@@ -23,7 +23,7 @@ function Header(): JSX.Element {
             </p>
           </div>
           <div
-            className={`w-full lg:w-auto absolute lg:static bg-black lg:bg-transparent p-4 top-20 transition-all delay-300 ease-in-out ${
+            className={`w-full lg:w-auto absolute lg:static bg-black lg:bg-transparent p-4 pb-0 lg:pb-4 top-20 transition-all delay-300 ease-in-out ${
               isMenuOpen ? 'left-0' : '-left-full'
             }`}
           >
