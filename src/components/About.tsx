@@ -38,20 +38,22 @@ function About(): JSX.Element {
         <div className="flex flex-col md:flex-row">
           <div className="w-full lg:w-2/5">
             <img
-              className="max-w-full md:w-full h-auto block mx-auto mb-4 md:mb-0 object-cover rounded-md filter grayscale"
+              className="max-w-full w-1/2 md:w-full h-auto block mx-auto mb-4 md:mb-0 object-cover rounded-full filter grayscale"
               src={profile}
               alt="Profile"
             />
           </div>
           <div className="w-full text-white md:ml-8 xl:ml-12 pt-0">
-            <h2 className="text-2xl md:text-3xl xl:text6xl font-heading font-bold mb-2">
-              About me
-            </h2>
-            <p className="lg:max-w-xl text-sm md:text-base mb-4 xl:mb-6">
-              A story of an electronics technician into a full-time frontend
-              developer. Studied web development after my working hours. And
-              successfully landed a frontend developer position last 2020.
-            </p>
+            <div className="text-center md:text-left mb-4 xl:mb-6">
+              <h2 className="text-2xl md:text-3xl xl:text6xl font-heading font-bold mb-2">
+                About me
+              </h2>
+              <p className="lg:max-w-xl text-sm md:text-base">
+                A story of an electronics technician into a full-time frontend
+                developer. Studied web development after my working hours. And
+                successfully landed a frontend developer position last 2020.
+              </p>
+            </div>
             <div className="flex flex-row space-x-2 mb-4 xl:mb-6">
               <a
                 onClick={onButtonClick}
