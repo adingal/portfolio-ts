@@ -1,10 +1,11 @@
+import Container from '../atoms/Container'
 import heroImage from '../assets/images/hero-image.svg'
 
 function Hero(): JSX.Element {
   const firstName: string[] = ['A', 'l', 'e', 'x']
 
   return (
-    <section id="home" className="bg-transparent py-6 md:py-8">
+    <Container sectionID="home">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center">
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center space-y-2 text-white">
@@ -59,7 +60,7 @@ function Hero(): JSX.Element {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   )
 }
 

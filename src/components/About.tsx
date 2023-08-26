@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Container from '../atoms/Container'
 import profile from '../assets/images/profile.jpg'
 
 type Collapse = {
@@ -32,7 +33,7 @@ function About(): JSX.Element {
   }
 
   return (
-    <section id="about" className="bg-transparent py-6 md:py-8">
+    <Container sectionID="about">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           <div className="w-full lg:w-2/5">
@@ -180,7 +181,7 @@ function About(): JSX.Element {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   )
 }
 
