@@ -102,6 +102,7 @@ function About(): JSX.Element {
                       <li>JavaScript</li>
                       <li>TypeScript (Basics)</li>
                       <li>NodeJs (Basics)</li>
+                      <li>Git</li>
                     </ul>
                   </div>
                   <div>
