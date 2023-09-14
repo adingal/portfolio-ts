@@ -3,11 +3,6 @@ import Container from '../atoms/Container'
 import profile from '../assets/images/profile.jpg'
 import experiences from '../data/experience'
 
-var dateOptions = {
-  month: 'long',
-  year: 'numeric',
-}
-
 type Collapse = {
   skills: boolean
   experience: boolean
