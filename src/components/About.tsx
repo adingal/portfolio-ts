@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import Container from '../atoms/Container'
 import profile from '../assets/images/profile.jpg'
+import experiences from '../data/experience'
+
+var dateOptions = {
+  month: 'long',
+  year: 'numeric',
+}
 
 type Collapse = {
   skills: boolean
@@ -51,7 +57,7 @@ function About(): JSX.Element {
               <p className="lg:max-w-xl text-sm md:text-base">
                 A story of an electronics technician into a full-time frontend
                 developer. Studied web development after my working hours. And
-                successfully landed a frontend developer position last 2020.
+                successfully landed a frontend developer position.
               </p>
             </div>
             <div className="flex flex-row space-x-2 mb-4 xl:mb-6">
@@ -112,46 +118,30 @@ function About(): JSX.Element {
                 </div>
               </div>
               <div className={`${collapse.experience ? 'block' : 'hidden'}`}>
-                <div className="mb-4">
-                  <h3 className="text-lg lg:text-xl font-medium mb-0">
-                    Frontend Developer
-                    <span className="text-sm text-gray-500 ml-2">
-                      Freelance
-                    </span>
-                  </h3>
-                  <p className="text-base font-normal lg:font-medium text-gray-300 mb-0">
-                    eMarketMed
-                  </p>
-                  <p className="text-sm text-gray-300 mb-0">
-                    Tel Aviv-Yafo, Israel
-                  </p>
-                  <span className="text-sm text-gray-500">
-                    October 2020 - present
-                  </span>
-                  <p className="text-sm text-gray-400">
-                    Vanilla | Shopify | React
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg lg:text-xl font-medium mb-0">
-                    Frontend Developer
-                    <span className="text-sm text-gray-500 ml-2">
-                      Full-time
-                    </span>
-                  </h3>
-                  <p className="text-base font-normal lg:font-medium text-gray-300 mb-0">
-                    DottyStyle Creative
-                  </p>
-                  <p className="text-sm text-gray-300 mb-0">
-                    Sydney, Australia
-                  </p>
-                  <span className="text-sm text-gray-500">
-                    September 2021 - May 2022
-                  </span>
-                  <p className="text-sm text-gray-400">
-                    WordPress | Shopify | React
-                  </p>
-                </div>
+                {experiences &&
+                  experiences.length > 0 &&
+                  experiences.map((experience) => (
+                    <div className="mb-4" key={experience.id}>
+                      <h3 className="text-lg lg:text-xl font-medium mb-0">
+                        {experience.title}
+                        <span className="text-sm text-gray-500 ml-2">
+                          {experience.position}
+                        </span>
+                      </h3>
+                      <p className="text-base font-normal lg:font-medium text-gray-300 mb-0">
+                        {experience.company}
+                      </p>
+                      <p className="text-sm text-gray-300 mb-0">
+                        {experience.companyLocation}
+                      </p>
+                      <span className="text-sm text-gray-500">
+                        {experience.startDate.toLocaleDateString()}
+                        {experience.endDate !== null
+                          ? ` - ${experience.endDate.toLocaleDateString()}`
+                          : ' - present'}
+                      </span>
+                    </div>
+                  ))}
               </div>
               <div className={`${collapse.education ? 'block' : 'hidden'}`}>
                 <div className="mb-4">
