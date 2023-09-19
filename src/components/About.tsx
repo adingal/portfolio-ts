@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import date from 'date-and-time'
 import Container from '../atoms/Container'
 import profile from '../assets/images/profile.jpg'
 import experiences from '../data/experience'
@@ -111,33 +112,49 @@ function About(): JSX.Element {
                       <li>ExpressJs (Basics)</li>
                     </ul>
                   </div>
+                  <div>
+                    <h3 className="text-base lg:text-xl font-medium mb-2">
+                      CMS
+                    </h3>
+                    <ul className="mb-4 list-disc list-inside">
+                      <li>WordPress</li>
+                      <li>Shopify</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div className={`${collapse.experience ? 'block' : 'hidden'}`}>
-                {experiences &&
-                  experiences.length > 0 &&
-                  experiences.map((experience) => (
-                    <div className="mb-4" key={experience.id}>
-                      <h3 className="text-lg lg:text-xl font-medium mb-0">
-                        {experience.title}
-                        <span className="text-sm text-gray-500 ml-2">
-                          {experience.position}
+                {experiences && experiences.length > 0 ? (
+                  <div className="flex flex-col-reverse">
+                    {experiences.map((experience) => (
+                      <div className="mb-4" key={experience.id}>
+                        <h3 className="text-lg lg:text-xl font-medium mb-0">
+                          {experience.title}
+                          <span className="text-sm text-gray-500 ml-2">
+                            {experience.position}
+                          </span>
+                        </h3>
+                        <p className="text-base font-normal lg:font-medium text-gray-300 mb-0">
+                          {experience.company}
+                        </p>
+                        <p className="text-sm text-gray-300 mb-0">
+                          {experience.companyLocation}
+                        </p>
+                        <span className="text-sm text-gray-500">
+                          {date.format(experience.startDate, 'MMM YYYY')}
+                          {experience.endDate !== null
+                            ? ` - ${date.format(
+                                experience.endDate,
+                                'MMM YYYY'
+                              )}`
+                            : ' - present'}
                         </span>
-                      </h3>
-                      <p className="text-base font-normal lg:font-medium text-gray-300 mb-0">
-                        {experience.company}
-                      </p>
-                      <p className="text-sm text-gray-300 mb-0">
-                        {experience.companyLocation}
-                      </p>
-                      <span className="text-sm text-gray-500">
-                        {experience.startDate.toLocaleDateString()}
-                        {experience.endDate !== null
-                          ? ` - ${experience.endDate.toLocaleDateString()}`
-                          : ' - present'}
-                      </span>
-                    </div>
-                  ))}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p>No experiences added.</p>
+                )}
               </div>
               <div className={`${collapse.education ? 'block' : 'hidden'}`}>
                 <div className="mb-4">
