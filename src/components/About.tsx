@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import date from 'date-and-time'
 import Container from '../atoms/Container'
+import SectionTitle from '../atoms/SectionTitle'
 import profile from '../assets/images/profile.jpg'
 import experiences from '../data/experience'
 
@@ -47,9 +48,7 @@ function About(): JSX.Element {
           </div>
           <div className="w-full text-white md:ml-8 xl:ml-12 pt-0">
             <div className="text-center md:text-left mb-4 xl:mb-6">
-              <h2 className="text-2xl md:text-3xl xl:text6xl font-heading font-bold mb-2">
-                About me
-              </h2>
+              <SectionTitle title="About me" />
               <p className="lg:max-w-xl text-sm md:text-base">
                 A story of an electronics technician into a full-time frontend
                 developer. Studied web development after my working hours. And

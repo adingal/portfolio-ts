@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '../atoms/Container'
+import SectionTitle from '../atoms/SectionTitle'
 import externalLinkIcon from '../assets/images/external-link.png'
 import projects from '../data/clientProjects'
 
@@ -17,9 +18,7 @@ function Portfolio() {
   return (
     <Container sectionID="portfolio">
       <div className="max-w-[1440px] mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl xl:text6xl font-heading font-bold text-center mb-2 md:mb-3 lg:mb-4 xl:mb-6 text-white">
-          Projects
-        </h2>
+        <SectionTitle title="Projects" />
         {projects && projects.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project) => (
