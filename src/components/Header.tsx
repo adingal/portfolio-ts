@@ -1,13 +1,14 @@
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 
-type HeaderLink = { id: number; name: string; url: string }
+type HeaderLink = { id: number; name: string }
 type HeaderLinks = HeaderLink[]
 
 const headerLinks: HeaderLinks = [
-  { id: 0, name: 'Home', url: '#home' },
-  { id: 1, name: 'About', url: '#about' },
-  { id: 2, name: 'Portfolio', url: '#portfolio' },
-  { id: 3, name: 'Contact', url: '#contact' },
+  { id: 0, name: 'Home' },
+  { id: 1, name: 'About' },
+  { id: 2, name: 'Portfolio' },
+  { id: 3, name: 'Contact' },
 ]
 
 function Header(): JSX.Element {
@@ -34,7 +35,15 @@ function Header(): JSX.Element {
                     className="w-full pb-1 lg:pb-0 border-b border-gray-600 lg:border-b-0"
                     key={link.id}
                   >
-                    <a href={link.url}>{link.name}</a>
+                    <Link
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      className="cursor-pointer"
+                      to={link.name.toLowerCase()}
+                      smooth={true}
+                      duration={500}
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
