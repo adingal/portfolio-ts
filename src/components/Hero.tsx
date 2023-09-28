@@ -46,10 +46,6 @@ function Hero(): JSX.Element {
                 <p className="text-sm text-white">Please define your name.</p>
               )}
             </h1>
-
-            <p className="text-base md:text-lg xl:text-xl">
-              A career shifter from the Philippines
-            </p>
           </div>
           <div className="w-full md:w-1/2 text-center mb-4 md:mb-0">
             <img
