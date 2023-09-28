@@ -49,7 +49,7 @@ function About(): JSX.Element {
           <div className="w-full text-white md:ml-8 xl:ml-12 pt-0">
             <div className="text-center md:text-left mb-4 xl:mb-6">
               <SectionTitle title="About me" />
-              <p className="lg:max-w-xl text-sm md:text-base">
+              <p className="lg:max-w-xl text-lg lg:text-xl">
                 A story of an electronics technician into a full-time frontend
                 developer. Studied web development after my working hours. And
                 successfully landed a frontend developer position.
@@ -86,14 +86,14 @@ function About(): JSX.Element {
             </div>
             <div>
               <div className={`${collapse.skills ? 'block' : 'hidden'}`}>
-                <div className="flex flex-col md:flex-row md:space-x-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4">
                   <div>
                     <h3 className="text-base lg:text-xl font-medium mb-2">
                       Technology
                     </h3>
                     <ul className="mb-4 list-disc list-inside">
-                      <li>HTML</li>
-                      <li>CSS</li>
+                      <li>HTML5</li>
+                      <li>CSS3</li>
                       <li>JavaScript</li>
                       <li>TypeScript (Basics)</li>
                       <li>NodeJs (Basics)</li>
@@ -106,18 +106,9 @@ function About(): JSX.Element {
                     </h3>
                     <ul className="mb-4 list-disc list-inside">
                       <li>React</li>
-                      <li>Bootstrap</li>
+                      <li>Bootstrap 4/5 | Reactstrap</li>
                       <li>TailwindCSS</li>
                       <li>ExpressJs (Basics)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-base lg:text-xl font-medium mb-2">
-                      CMS
-                    </h3>
-                    <ul className="mb-4 list-disc list-inside">
-                      <li>WordPress</li>
-                      <li>Shopify</li>
                     </ul>
                   </div>
                 </div>
