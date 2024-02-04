@@ -39,7 +39,7 @@ const experiences: Experience[] = [
   {
     id: 3,
     title: 'Frontend Developer',
-    position: 'Freelance',
+    position: 'Project-based',
     company: 'eMarketMed',
     companyLocation: 'Tel Aviv-Yafo, Israel',
     startDate: new Date('October 2020'),
